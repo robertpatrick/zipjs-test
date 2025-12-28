@@ -57,9 +57,11 @@ class ZipWorker {
           if (zipEntry.directory) {
             await zipWriter.add(zipPath, null);
           } else {
-            const blobWriter = new zip.BlobWriter();
-            await zipEntry.getData(blobWriter)
-            await zipWriter.add(zipPath, new zip.BlobReader(await blobWriter.getData()));
+            // const blobWriter = new zip.BlobWriter();
+            // await zipEntry.getData(blobWriter)
+            // await zipWriter.add(zipPath, new zip.BlobReader(await blobWriter.getData()));
+            const entryData = await zipEntry.getData(new zip.BlobWriter());
+            await zipWriter.add(zipPath, new zip.BlobReader(entryData));
           }
           console.log(`Copied ${zipPath} from original zip file ${this.originalFile} to new zip file ${this.newFile}`);
         } else {
@@ -87,11 +89,14 @@ class ZipWorker {
         }
         console.log(`Added contents of file ${newSourceFilePath} to new zip file ${this.newFile} at ${zipPath}`);
       }
+      console.log(`Finished writing to ${this.newFile}`);
     } catch (err) {
       return Promise.reject(new Error(`Failed to add contents of file ${newSourceFilePath} to new zip file ${this.newFile} at ${zipPath}`));
     } finally {
+      console.log('Calling close on readers and writers');
       await this._closeReaders(zipFileReader, zipReader);
       await this._closeWriters(zipFileWriter, zipWriter);
+      console.log('Close complete on readers and writers');
     }
     return Promise.resolve();
   }
