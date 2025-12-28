@@ -1,0 +1,82 @@
+{
+  "wlsdeploy/applications/my-app.war": {
+    "op": "copy",
+    "directory": false,
+    "path": "wlsdeploy/applications/my-app.war"
+  },
+  "wlsdeploy/applications/my-app.xml": {
+    "op": "copy",
+    "directory": false,
+    "path": "wlsdeploy/applications/my-app.xml"
+  },
+  "wlsdeploy/applications/my-other-app/META-INF/MANIFEST.MF": {
+    "op": "copy",
+    "directory": false,
+    "path": "wlsdeploy/applications/my-other-app/META-INF/MANIFEST.MF"
+  },
+  "wlsdeploy/applications/my-other-app/META-INF/maven/oracle.jcs.lifecycle/get-listen-address-app/pom.properties": {
+    "op": "copy",
+    "directory": false,
+    "path": "wlsdeploy/applications/my-other-app/META-INF/maven/oracle.jcs.lifecycle/get-listen-address-app/pom.properties"
+  },
+  "wlsdeploy/applications/my-other-app/META-INF/maven/oracle.jcs.lifecycle/get-listen-address-app/pom.xml": {
+    "op": "copy",
+    "directory": false,
+    "path": "wlsdeploy/applications/my-other-app/META-INF/maven/oracle.jcs.lifecycle/get-listen-address-app/pom.xml"
+  },
+  "wlsdeploy/applications/my-other-app/WEB-INF/classes/com/oracle/platform/GetListenAddressServlet.class": {
+    "op": "copy",
+    "directory": false,
+    "path": "wlsdeploy/applications/my-other-app/WEB-INF/classes/com/oracle/platform/GetListenAddressServlet.class"
+  },
+  "wlsdeploy/applications/my-other-app/WEB-INF/classes/com/oracle/platform/ListenAddressAndPort.class": {
+    "op": "copy",
+    "directory": false,
+    "path": "wlsdeploy/applications/my-other-app/WEB-INF/classes/com/oracle/platform/ListenAddressAndPort.class"
+  },
+  "wlsdeploy/applications/my-other-app/WEB-INF/web.xml": {
+    "op": "copy",
+    "directory": false,
+    "path": "wlsdeploy/applications/my-other-app/WEB-INF/web.xml"
+  },
+  "wlsdeploy/applications/my-other-app/WEB-INF/weblogic.xml": {
+    "op": "copy",
+    "directory": false,
+    "path": "wlsdeploy/applications/my-other-app/WEB-INF/weblogic.xml"
+  },
+  "wlsdeploy/application/my-other-app.war":{
+    "op": "copy",
+    "directory": false,
+    "path": "wlsdeploy/applications/my-other-app.war"
+  },
+  "wlsdeploy/classpathLibraries/bar/Foo.class": {
+    "op": "copy",
+    "directory": false,
+    "path": "wlsdeploy/classpathLibraries/bar/Foo.class"
+  },
+  "wlsdeploy/classpathLibraries/bar.jar": {
+    "op": "copy",
+    "directory": false,
+    "path": "wlsdeploy/classpathLibraries/bar.jar"
+  },
+  "wlsdeploy/stores/fs1/": {
+    "op": "copy",
+    "directory": true,
+    "path": "wlsdeploy/stores/fs1/"
+  },
+  "wlsdeploy/stores/fs2/": {
+    "op": "copy",
+    "directory": true,
+    "path": "wlsdeploy/stores/fs2/"
+  },
+  "wlsdeploy/stores/fs3/": {
+    "op": "copy",
+    "directory": true,
+    "path": "wlsdeploy/stores/fs3/"
+  },
+  "wlsdeploy/pluginDeployments/test-=plugin.jar": {
+    "op": "copy",
+    "directory": false,
+    "path": "wlsdeploy/pluginDeployments/test-=plugin.jar"
+  }
+}

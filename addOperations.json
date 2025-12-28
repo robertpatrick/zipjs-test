@@ -1,0 +1,8 @@
+[
+  {
+    "op": "add",
+    "directory": false,
+    "path": "config/wlsdeploy/custom/package.json",
+    "filePath": "package.json"
+  }
+]

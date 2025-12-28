@@ -1,0 +1,5 @@
+node_modules
+newArchive.zip
+.idea
+**/*.iml
+**/.DS_Store
