@@ -44,7 +44,7 @@
     "directory": false,
     "path": "wlsdeploy/applications/my-other-app/WEB-INF/weblogic.xml"
   },
-  "wlsdeploy/application/my-other-app.war":{
+  "wlsdeploy/applications/my-other-app.war":{
     "op": "copy",
     "directory": false,
     "path": "wlsdeploy/applications/my-other-app.war"
@@ -74,9 +74,9 @@
     "directory": true,
     "path": "wlsdeploy/stores/fs3/"
   },
-  "wlsdeploy/pluginDeployments/test-=plugin.jar": {
+  "wlsdeploy/pluginDeployments/test-plugin.jar": {
     "op": "copy",
     "directory": false,
-    "path": "wlsdeploy/pluginDeployments/test-=plugin.jar"
+    "path": "wlsdeploy/pluginDeployments/test-plugin.jar"
   }
 }

@@ -20,7 +20,7 @@ const expectedPaths = [
   "wlsdeploy/applications/my-other-app/WEB-INF/classes/com/oracle/platform/ListenAddressAndPort.class",
   "wlsdeploy/applications/my-other-app/WEB-INF/web.xml",
   "wlsdeploy/applications/my-other-app/WEB-INF/weblogic.xml",
-  "wlsdeploy/application/my-other-app.war",
+  "wlsdeploy/applications/my-other-app.war",
   "wlsdeploy/classpathLibraries/bar/Foo.class",
   "wlsdeploy/classpathLibraries/bar.jar",
   "wlsdeploy/pluginDeployments/test-plugin.jar",
@@ -60,8 +60,6 @@ function _createCopyOperationsMap() {
 
 function _compareArrays(actual, expected) {
   const errors = [];
-  let biggerArray, smallerArray;
-  let biggerArrayName, smallerArrayName
   if (actual.length > expected.length) {
     errors.push(`actual array of length ${actual.length} is longer than the expected length of ${expected.length}`);
   } else if (expected.length > actual.length) {

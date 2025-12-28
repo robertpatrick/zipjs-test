@@ -57,9 +57,6 @@ class ZipWorker {
           if (zipEntry.directory) {
             await zipWriter.add(zipPath, null);
           } else {
-            // const blobWriter = new zip.BlobWriter();
-            // await zipEntry.getData(blobWriter)
-            // await zipWriter.add(zipPath, new zip.BlobReader(await blobWriter.getData()));
             const entryData = await zipEntry.getData(new zip.BlobWriter());
             await zipWriter.add(zipPath, new zip.BlobReader(entryData));
           }
@@ -131,16 +128,16 @@ class ZipWorker {
       try { await zipFileReader.close(); } catch(err) { }
     }
     if (!!zipReader) {
-      try { zipReader.close(); } catch(err) { }
+      try { await zipReader.close(); } catch(err) { }
     }
   }
 
   async _closeWriters(zipFileWriter, zipWriter) {
+    if (!!zipWriter) {
+      try { await zipWriter.close(); } catch(err) { }
+    }
     if (!!zipFileWriter) {
       try { await zipFileWriter.close(); } catch(err) { }
-    }
-    if (!!zipWriter) {
-      try { zipWriter.close(); } catch(err) { }
     }
   }
 }
